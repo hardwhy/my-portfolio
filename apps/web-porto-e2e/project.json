@@ -1,0 +1,9 @@
+{
+  "name": "web-porto-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web-porto-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["web-porto"],
+  "// targets": "to see all targets run: nx show project web-porto-e2e --web",
+  "targets": {}
+}
