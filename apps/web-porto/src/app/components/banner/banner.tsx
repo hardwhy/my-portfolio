@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Col, Container, Row } from 'react-bootstrap';
-import Header from '@/src/app/assets/images/header-img.svg';
 import { useEffect, useState } from 'react';
 import './banner.css';
+import { Header } from '../../assets';
 
 enum ToRotate {
   MOBILE = 'Mobile Developer',
