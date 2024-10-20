@@ -1,5 +1,6 @@
 'use client';
 import { MyBanner } from './components/banner/banner';
+import { Contact } from './components/contact/contact';
 import MyNavBar from './components/nav-bar/nav-bar';
 import { MySkills } from './components/skills/skills';
 
@@ -14,6 +15,7 @@ export default function Index() {
       <MyNavBar />
       <MyBanner />
       <MySkills />
+      <Contact />
     </div>
   );
 }
