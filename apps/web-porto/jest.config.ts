@@ -1,10 +1,7 @@
-export default {
-  displayName: 'web-porto',
-  preset: '../../jest.preset.js',
-  transform: {
-    '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
-    '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nx/next/babel'] }],
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/apps/web-porto',
+// jest.config.js
+
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  testMatch: ['**/?(*.)+(spec|test).ts'],
 };

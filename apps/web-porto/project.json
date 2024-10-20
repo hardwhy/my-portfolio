@@ -1,9 +1,58 @@
 {
   "name": "web-porto",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/web-porto",
+  "sourceRoot": "apps/web-porto/src",
   "projectType": "application",
-  "tags": [],
-  "// targets": "to see all targets run: nx show project web-porto --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/web-porto"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "apps/web-porto"
+        },
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "web-porto:build",
+        "dev": true
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "web-porto:build:development",
+          "dev": true
+        },
+        "production": {
+          "buildTarget": "web-porto:build:production",
+          "dev": false
+        }
+      }
+    },
+    "serve-api": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "ts-node-dev --respawn --transpile-only src/app/api",
+        "cwd": "apps/web-porto"
+      },
+      "configurations": {
+        "development": {
+          "command": "ts-node-dev --respawn --transpile-only src/app/api"
+        },
+        "production": {
+          "command": "node dist/apps/web-porto/src/app/api/index.js"
+        }
+      }
+    }
+  },
+  "tags": []
 }

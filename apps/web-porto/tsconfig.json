@@ -1,7 +1,12 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -20,7 +25,18 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/api/*": [
+        "./src/app/api/*"
+      ],
+      "@/components/*": [
+        "./src/app/components/*"
+      ],
+      "@/assets/*": [
+        "./src/app/assets/*"
+      ]
     }
   },
   "include": [
@@ -31,5 +47,7 @@
     "app/lib/placeholder-data.js",
     "scripts/seed.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

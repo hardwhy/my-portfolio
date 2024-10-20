@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@/*": ["apps/web-porto/src/*"],
+      "@web-porto/*": ["apps/web-porto/src/*"],
+      "@web-porto/api/*": ["apps/web-porto/src/app/api/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
