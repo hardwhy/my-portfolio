@@ -1,0 +1,56 @@
+{
+  "name": "web-porto-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/web-porto-api/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "dist/apps/web-porto-api",
+        "format": ["cjs"],
+        "bundle": false,
+        "main": "apps/web-porto-api/src/main.ts",
+        "tsConfig": "apps/web-porto-api/tsconfig.app.json",
+        "assets": ["apps/web-porto-api/src/assets"],
+        "generatePackageJson": true,
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "web-porto-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "web-porto-api:build:development"
+        },
+        "production": {
+          "buildTarget": "web-porto-api:build:production"
+        }
+      }
+    }
+  }
+}

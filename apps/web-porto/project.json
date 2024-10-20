@@ -3,12 +3,11 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/web-porto/src",
   "projectType": "application",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/apps/web-porto"
@@ -25,7 +24,8 @@
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "web-porto:build",
-        "dev": true
+        "dev": true,
+        "proxyConfig": "apps/web-porto/proxy.conf.json"
       },
       "configurations": {
         "development": {
@@ -53,6 +53,5 @@
         }
       }
     }
-  },
-  "tags": []
+  }
 }
