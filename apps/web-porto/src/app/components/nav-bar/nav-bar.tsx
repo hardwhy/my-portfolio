@@ -7,14 +7,13 @@ import nav3 from '../../assets/images/nav-icon3.svg';
 import logo from '../../assets/images/logo.svg';
 import Image from 'next/image';
 import './nav-bar.css';
+import { navIcons } from '../../assets';
 
 enum NavBarLink {
   HOME = 'home',
   SKILLS = 'skills',
   PROJECTS = 'projects',
 }
-
-const navIcons = [nav1, nav2, nav3];
 
 const MyNavBar = () => {
   const [activeLink, setActiveLink] = useState(NavBarLink.HOME);

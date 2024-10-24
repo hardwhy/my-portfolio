@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ContactImg } from '../../assets';
+import './contact.css';
 
 const requiredMessage = 'This field is required';
 const ContactSchema = Yup.object({
@@ -46,26 +47,34 @@ export const Contact = () => {
   return (
     <section className="contact" id="connect">
       <Container>
-        <Row>
-          <Col md={6}>
+        <Row className="align-items-center">
+          <Col size={12} md={6}>
             <Image src={ContactImg} alt="Contact Image" />
           </Col>
-          <Col md={6}>
+          <Col size={12} md={6}>
             <h2>Get In Touch</h2>
             <form onSubmit={submit}>
               <Row>
-                <Col md={6} className="px-1">
+                <Col size={12} md={6} className="px-1">
                   <input placeholder="Name" type="text" {...register('name')} />
                 </Col>
-                <Col md={6} className="px-1">
+                <Col size={12} md={6} className="px-1">
                   <input
-                    placeholder="Email"
-                    type="text"
+                    placeholder="Phone"
+                    type="tel"
                     {...register('email')}
                   />
                 </Col>
-                <Col md={6} className="px-1">
-                  <textarea placeholder="Message" {...register('message')} />
+                <Col size={12} md={6} className="px-1">
+                  <input
+                    placeholder="Email"
+                    type="email"
+                    {...register('email')}
+                  />
+                </Col>
+
+                <Col size={12} className="px-1">
+                  <textarea rows={6} placeholder="Message" {...register('message')} />
                   <button type="submit">
                     <span>{buttonText}</span>
                   </button>
