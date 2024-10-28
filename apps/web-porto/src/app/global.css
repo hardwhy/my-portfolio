@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("boxicons/css/boxicons.min.css");
+
 @font-face {
   font-family: Centra;
   src: url('../app/assets/fonts/CentraNo2-Bold.ttf');
@@ -44,7 +46,7 @@ body {
   font-weight: 400;
   font-family: 'Centra', sans-serif !important;
   color: #fff !important;
-  background-color: #121212 !important;
+  background-color: #0d0d0d !important;
   overflow-x: hidden;
   position: relative;
 }
@@ -61,47 +63,4 @@ h6
   margin: 0;
   padding: 0;
   line-height: normal;
-}
-
-.social-icon {
-  display: inline-block;
-  margin-left: 14px;
-}
-
-.social-icon a {
-  width: 42px;
-  height: 42px;
-  background: rgba(217, 217, 217, .1);
-  display: inline-flex;
-  border-radius: 50%;
-  margin-right: 6px;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  border: 1px solid rgba(255, 255, 255, .5);
-}
-
-.social-icon a::before {
-  content: '';
-  width: 42px;
-  height: 42px;
-  position: absolute;
-  background-color: #ffffff;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: .3s ease-in-out;
-}
-
-.social-icon a:hover::before {
-  transform: scale(1);
-}
-
-.social-icon a img {
-  width: 40%;
-  z-index: 1;
-  transition: .3s ease-in-out;
-}
-
-.social-icon a:hover img {
-  filter: brightness(0) saturate(100%) invert(0) sepia(7%) hue-rotate(346deg)
 }

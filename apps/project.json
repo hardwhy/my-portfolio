@@ -54,12 +54,5 @@
         }
       }
     }
-  },
-  "serve-api": {
-    "executor": "nx:run-commands",
-    "options": {
-      "command": "ts-node-dev --respawn --transpile-only src/app/api/index.ts",
-      "cwd": "apps/web-porto"
-    }
   }
 }

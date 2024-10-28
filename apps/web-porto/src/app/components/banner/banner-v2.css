@@ -1,0 +1,127 @@
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 70px 10% 0;
+    justify-content: space-between;
+
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.home-content h3 span {
+    color: #0ef;
+}
+
+.home-content h3:nth-child(2) {
+    margin-bottom: 32px;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 30px;
+}
+
+.home-content .btn-box {
+    display: flex;
+    /* justify-content: space-between; */
+    /* width: 345px; */
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.home-img {
+    position: relative;
+    width: 450px;
+    /* Set the width of the circle */
+    height: 450px;
+    /* Set the height equal to the width */
+    background-color: #0ef;
+    /* Set the background color */
+    border-radius: 100%;
+    background: #0ef;
+    /* box-shadow: 0 10px 5px #0ef; */
+}
+
+.home-img img {
+    position: absolute;
+    top: -90px;
+    width: 100%;
+    z-index: 2;
+    clip-path: ellipse(55% 55% at 50% 39%);
+    filter: grayscale(70%);
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 150px; */
+    height: 100%;
+    background: #0ef;
+    border: 2px solid #0ef;
+    border-radius: 30px;
+    font-size: 19px;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 20px 20px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-box a:hover {
+    color: #0ef;
+    box-shadow: 0 0 20px #0ef;
+}
+
+.btn-box a:nth-child(2) {
+    background-color: transparent;
+    color: #0ef;
+    margin-left: 20px;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: #0d0d0d;
+    transition: .5s;
+    color: #f2f2f2;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.btn-box a:nth-child(2):before {
+    background: #0ef;
+    transition: .5s;
+    color: #f2f2f2;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #0d0d0d;
+    box-shadow: 0 0 20px #0ef;
+    transition: .5s;
+}

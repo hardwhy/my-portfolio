@@ -1,5 +1,6 @@
 import './global.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'boxicons/css/boxicons.min.css';
 
 export const metadata = {
   title: 'Welcome to web-porto',
@@ -13,6 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head></head>
       <body>{children}</body>
     </html>
   );

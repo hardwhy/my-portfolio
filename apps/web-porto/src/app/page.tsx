@@ -1,8 +1,8 @@
 'use client';
-import { MyBanner } from './components/banner/banner';
+import { BannerV2 } from './components/banner/banner-v2';
 import { Contact } from './components/contact/contact';
 import { Footer } from './components/footer/footer';
-import MyNavBar from './components/nav-bar/nav-bar';
+import { NavBarV2 } from './components/nav-bar/nav-bar-v2';
 import { MySkills } from './components/skills/skills';
 
 export default function Index() {
@@ -13,11 +13,11 @@ export default function Index() {
    */
   return (
     <div>
-      <MyNavBar />
-      <MyBanner />
-      <MySkills />
+      <NavBarV2 />
+      <BannerV2 />
+      {/* <MySkills />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
