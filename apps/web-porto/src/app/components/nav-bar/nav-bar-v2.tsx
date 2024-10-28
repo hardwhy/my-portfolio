@@ -11,13 +11,14 @@ export const NavBarV2 = () => {
         Hardy.
       </a>
       <nav className="navbar">
-        {Object.values(NavBarLink).map((v) => {
+        {Object.values(NavBarLink).map((v, index) => {
           const isActive = activeLink === v;
           let className;
-          if (isActive) className = 'active ' + className;
+          if (isActive) className = 'active';
           return (
             <a
               key={v}
+              style={{ '--i': index } as React.CSSProperties}
               className={className}
               href={`#${v}`}
               onClick={() => setActiveLink(v)}

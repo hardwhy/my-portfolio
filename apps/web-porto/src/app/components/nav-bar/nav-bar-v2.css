@@ -1,33 +1,44 @@
-.header{
+@import url('../../animations/slide-animation.css');
+
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 20px 10%;
+    padding: 20px 10% 0;
     background-color: transparent;
     justify-content: space-between;
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 25px;
     color: #f2f2f2;
     text-decoration: none;
     font-weight: 600;
+    cursor: default;
+    --translate-x: -100px;
+    /* Moves down from 100px */
+    animation: slide 1s ease forwards;
 }
 
-.navbar a{
+.navbar a {
     font-size: 18px;
     color: #f2f2f2;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    display: inline-block;
+    --translate-y: 100px;
+    animation: slide .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover,
-.navbar a.active
-{
+.navbar a.active {
     color: #0ef;
 }
