@@ -1,19 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { capitalizeFirstLetter } from '../../utils/capitalize-first-letter';
-import nav1 from '../../assets/images/nav-icon1.svg';
-import nav2 from '../../assets/images/nav-icon2.svg';
-import nav3 from '../../assets/images/nav-icon3.svg';
 import logo from '../../assets/images/logo.svg';
 import Image from 'next/image';
 import './nav-bar.css';
 import { navIcons } from '../../assets';
-
-enum NavBarLink {
-  HOME = 'home',
-  SKILLS = 'skills',
-  PROJECTS = 'projects',
-}
+import { NavBarLink } from './nav-bar-constants';
 
 const MyNavBar = () => {
   const [activeLink, setActiveLink] = useState(NavBarLink.HOME);
