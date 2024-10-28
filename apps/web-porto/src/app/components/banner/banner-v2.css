@@ -1,3 +1,7 @@
+@import url(../../animations/slide-animation.css);
+@import url(../../animations/zoom-animation.css);
+@import url(../../animations/elevate-animation.css);
+
 .home {
     height: 100vh;
     display: flex;
@@ -16,24 +20,39 @@
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    opacity: 0;
+    --translate-x: -100px;
+    animation: slide 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+    opacity: 0;
+    --translate-y: -100px;
+    animation: slide 1s ease forwards;
+    animation-delay: .7s;
 }
 
 .home-content h3 span {
     color: #0ef;
 }
 
-.home-content h3:nth-child(2) {
-    margin-bottom: 32px;
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    --translate-y: 100px;
+    animation: slide 1s ease forwards;
+    animation-delay: .7s;
 }
 
 .home-content p {
     font-size: 16px;
     margin: 20px 0 30px;
+    opacity: 0;
+    --translate-x: 100px;
+    animation: slide 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .home-content .btn-box {
@@ -46,15 +65,24 @@
 
 .home-img {
     position: relative;
-    width: 450px;
+    width: 400px;
     /* Set the width of the circle */
-    height: 450px;
+    height: 400px;
     /* Set the height equal to the width */
     background-color: #0ef;
     /* Set the background color */
     border-radius: 100%;
     background: #0ef;
     /* box-shadow: 0 10px 5px #0ef; */
+    opacity: 0;
+    --scale: 1;
+    animation: zoom 1s ease forwards, elevate 4s ease-in-out infinite;
+    animation-delay: .5s, 1.5s;
+}
+
+.home-img:hover {
+    box-shadow: 0 5px 20px #0ef;
+    cursor: pointer;
 }
 
 .home-img img {
@@ -62,8 +90,16 @@
     top: -90px;
     width: 100%;
     z-index: 2;
-    clip-path: ellipse(55% 55% at 50% 39%);
+    clip-path: ellipse(57% 56% at 50% 39%);
     filter: grayscale(70%);
+    opacity: 0;
+    --scale: 1;
+    animation: zoom .5s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-img img:hover {
+    filter: grayscale(0%);
 }
 
 .btn-box a {
@@ -84,6 +120,10 @@
     padding: 20px 20px;
     z-index: 1;
     overflow: hidden;
+    opacity: 0;
+    --translate-x: 100px;
+    animation: slide 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .btn-box a:hover {
@@ -95,6 +135,10 @@
     background-color: transparent;
     color: #0ef;
     margin-left: 20px;
+    opacity: 0;
+    --translate-x: -100px;
+    animation: slide 1s ease forwards;
+    animation-delay: 1s;
 }
 
 .btn-box a::before {
