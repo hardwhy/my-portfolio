@@ -26,15 +26,16 @@ export const BannerV2 = () => {
           the design, installation, testing, and maintenance of software
           systems. Equipped with a diverse and promising skill set. Proficient
           in various platforms, languages, and embedded
-          systems.Experiencedwiththelatestcutting-edgedevelopmenttoolsandprocedures.
-          Abletoeffectivelyself-manageduring independent projects, as well as
+          systems. Experienced with the latest cutting-edge development tools and procedures.
+          Able to effectively self-manage during independent projects, as well as
           collaborate as part of a productive team.
         </p>
-        <div className="btn-box">
-          <a href="#">Download CV</a>
-          <a href="#">Let's Connect</a>
+        <div className='action-container'>
+          <div className="btn-box">
+            <a href="#">Download CV</a>
+          </div>
+          <SocialIcons needAnimation />
         </div>
-        <SocialIcons needAnimation />
       </div>
       <div className="home-img">
         <Image src={Profile} alt="profile" />
