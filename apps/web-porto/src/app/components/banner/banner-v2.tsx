@@ -4,7 +4,7 @@ import './banner-v2.css';
 import { Profile } from '../../assets';
 import { Typing } from '../typing/typing';
 
-export const BannerV2 = () => {
+export const Banner = () => {
   return (
     <section className="home" id="home">
       <div className="home-content">
@@ -25,14 +25,14 @@ export const BannerV2 = () => {
           Experienced Software Developer adept in bringing forth expertise in
           the design, installation, testing, and maintenance of software
           systems. Equipped with a diverse and promising skill set. Proficient
-          in various platforms, languages, and embedded
-          systems. Experienced with the latest cutting-edge development tools and procedures.
-          Able to effectively self-manage during independent projects, as well as
+          in various platforms, languages, and embedded systems. Experienced
+          with the latest cutting-edge development tools and procedures. Able to
+          effectively self-manage during independent projects, as well as
           collaborate as part of a productive team.
         </p>
-        <div className='action-container'>
+        <div className="action-container">
           <div className="btn-box">
-            <a href="#">Download CV</a>
+            <a href={process.env.DOWNLOAD_CV_URL ?? ''}>Download CV</a>
           </div>
           <SocialIcons needAnimation />
         </div>

@@ -3,7 +3,7 @@ import { NavBarLink } from './nav-bar-constants';
 import './nav-bar-v2.css';
 import { capitalizeFirstLetter } from '../../utils/capitalize-first-letter';
 
-export const NavBarV2 = () => {
+export const NavBar = () => {
   const [activeLink, setActiveLink] = useState(NavBarLink.HOME);
   return (
     <header className="header">
