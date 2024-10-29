@@ -11,6 +11,7 @@ export const Typing = (props: { strings: string[] }) => {
       backDelay: 1000,
       backSpeed: 100,
       startDelay: 2000,
+      loop: true,
     });
 
     return () => {
