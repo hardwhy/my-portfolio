@@ -5,6 +5,7 @@ import Icon from '../icon';
 const socialIcons = [
   <Icon name="bxl-linkedin bx-sm" />,
   <Icon name="bxl-instagram bx-sm" />,
+  <Icon name="bxl-github bx-sm" />,
 ];
 
 export const SocialIcons = (props: { needAnimation?: boolean }) => {

@@ -31,7 +31,8 @@
     animation-delay: calc(.2s * var(--i));
 }
 
-.social-icon a::before {
+.social-icon a::before,
+.social-icon-animated a::before {
     content: '';
     width: 40px;
     height: 40px;
@@ -44,11 +45,13 @@
     z-index: -1;
 }
 
-.social-icon a:hover::before {
+.social-icon a:hover::before,
+.social-icon-animated a:hover::before {
     transform: scale(1);
 }
 
-.social-icon a:hover {
+.social-icon a:hover,
+.social-icon-animated a:hover {
     color: #0d0d0d;
     background: #0ef;
     box-shadow: 0 0 20px #0ef;
