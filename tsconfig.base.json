@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["apps/web-porto/src/*"],
-      "@web-porto/*": ["apps/web-porto/src/*"],
-      "@web-porto/api/*": ["apps/web-porto/src/app/api/*"]
+      "@web-porto-core": ["apps/core/src/index.ts"],
+      "@web-porto": ["apps/web-porto/src/*"],
+      "@web-porto-api": ["apps/web-porto-api/src/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
