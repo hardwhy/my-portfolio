@@ -1,9 +1,9 @@
 import path from 'path';
 import fs from 'fs';
-import { ContactModel } from '@/app/models';
+import { Contact } from '@web-porto-core';
 
 class MailService {
-  constructMail(data: ContactModel, template: string): string {
+  constructMail(data: Contact, template: string): string {
     const { email, message } = data;
     // In production, the file will be located in the dist folder
     const filePath = path.join(

@@ -2,7 +2,7 @@
 
 import { Request, Response } from 'express';
 import { contactService } from '../services/contact-service';
-import { ContactModel } from '../../../web-porto/src/app/models/contact-model';
+import { Contact } from '@web-porto-core';
 
 /**
  * Controller to handle contact form submissions.
@@ -16,7 +16,7 @@ export const sendContactEmail = async (
 ): Promise<void> => {
   try {
     // Extract contact data from the request body
-    const contactData: ContactModel = req.body;
+    const contactData: Contact = req.body;
 
     // Optionally, perform additional validation here
     // For example, check if email is valid, message length, etc.

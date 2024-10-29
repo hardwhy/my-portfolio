@@ -1,14 +1,14 @@
 // src/services/contact-service.ts
 
 import { contactRepository } from '../repositories';
-import { ContactModel } from '../../../web-porto/src/app/models';
 import path from 'path';
 import fs from 'fs';
 import { mailService } from './mail-service';
 import { EmailTemplate } from '../constants/enums/email-template-enum';
+import { Contact } from '@web-porto-core';
 
 class ContactService {
-  async sendContactEmail(contactData: ContactModel): Promise<void> {
+  async sendContactEmail(contactData: Contact): Promise<void> {
     const { name } = contactData;
     const emailTemplate = mailService.constructMail(
       contactData,
