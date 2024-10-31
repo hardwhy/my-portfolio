@@ -5,8 +5,8 @@ interface IconProps {
   name: IconName;
 }
 
-const Icon: React.FC<IconProps> = ({ name }) => {
+const BoxIcon: React.FC<IconProps> = ({ name }) => {
   return <i className={`bx ${name}`}></i>;
 };
 
-export default Icon;
+export default BoxIcon;
