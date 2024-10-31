@@ -4,7 +4,7 @@ import { capitalizeFirstLetter } from '../../utils/capitalize-first-letter';
 import logo from '../../assets/images/logo.svg';
 import Image from 'next/image';
 import './nav-bar.css';
-import { navIcons } from '../../assets';
+// import { navIcons } from '../../assets';
 import { NavBarLink } from './nav-bar-constants';
 
 const MyNavBar = () => {
@@ -52,7 +52,7 @@ const MyNavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              {navIcons.map((icon) => (
+              {Object.values(NavBarLink).map((icon) => (
                 <a key={icon} href="#">
                   <Image src={icon} alt="" />
                 </a>
