@@ -12,6 +12,7 @@ export const Typing = (props: { strings: string[] }) => {
       backSpeed: 100,
       startDelay: 2000,
       loop: true,
+      autoInsertCss: true,
     });
 
     return () => {
