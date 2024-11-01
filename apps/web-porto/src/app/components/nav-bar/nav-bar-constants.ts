@@ -1,5 +1,6 @@
 export enum NavBarLink {
-  HOME = 'home',
+  HOME = '',
+  // HOME = 'home',
   // SKILLS = 'skills',
   // PROJECTS = 'projects',
   // CONTACT = 'contact',
