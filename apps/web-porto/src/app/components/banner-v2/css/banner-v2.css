@@ -1,0 +1,26 @@
+@import url(../../../animations/slide-animation.css);
+@import url(../../../animations/zoom-animation.css);
+@import url(../../../animations/elevate-animation.css);
+@import 'home-content.css';
+@import 'home-img.css';
+@import 'btn-box.css';
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 70px 10% 0;
+    justify-content: space-between;
+
+}
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        padding-top: 20vh;
+        /* Center items */
+    }
+}
