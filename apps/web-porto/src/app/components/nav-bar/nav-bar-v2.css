@@ -42,3 +42,78 @@
 .navbar a.active {
     color: #0ef;
 }
+
+/* Add this to your existing CSS */
+/* Default styles for hamburger icon */
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    /* Stack lines vertically */
+    cursor: pointer;
+    /* Pointer cursor */
+}
+
+.hamburger div {
+    height: 3px;
+    /* Thickness of the lines */
+    width: 25px;
+    /* Width of the lines */
+    background-color: #f2f2f2;
+    /* Color of the lines */
+    margin: 4px 0;
+    /* Spacing between lines */
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 5%;
+        /* Adjust padding for mobile */
+        flex-direction: row;
+        /* Stack items vertically */
+        align-items: flex-start;
+        /* Align items to the start */
+    }
+
+    .navbar {
+        display: none;
+        /* Hide navbar links by default */
+        flex-direction: column;
+        /* Stack links vertically */
+        width: 100%;
+        /* Full width */
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Background for dropdown */
+        position: absolute;
+        /* Position it below the header */
+        top: 60px;
+        /* Adjust this according to your header height */
+        left: 0;
+        padding: 10px 0;
+        /* Padding for the dropdown */
+        z-index: 99;
+        /* Ensure it appears above other content */
+    }
+
+    .navbar.active {
+        display: flex;
+        /* Show navbar when active */
+    }
+
+    .navbar a {
+        margin: 10px 0;
+        /* Vertical spacing for links */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger icon */
+        cursor: pointer;
+        /* Pointer cursor */
+    }
+
+    .header.dimmed {
+        background-color: rgba(0, 0, 0, 0.9);
+        /* Opaque background */
+    }
+}
