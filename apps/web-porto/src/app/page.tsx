@@ -1,9 +1,6 @@
 'use client';
-import { Banner } from './components/banner/banner-v2';
-import { Contact } from './components/contact/contact';
-import { Footer } from './components/footer/footer';
+import { Banner } from './components/banner-v2/banner-v2';
 import { NavBar } from './components/nav-bar/nav-bar-v2';
-import { MySkills } from './components/skills/skills';
 
 export default function Index() {
   /*
